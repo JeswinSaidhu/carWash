@@ -28,7 +28,7 @@ const Navbar = () => {
 
     setIsSearching(true);
     try {
-      const response = await fetch(`http://localhost:${import.meta.env.VITE_PORT}/api/bookings/search?q=${encodeURIComponent(searchQuery)}`);
+      const response = await fetch(`${import.meta.env.FETCH_API}/api/bookings/search?q=${encodeURIComponent(searchQuery)}`);
       if (!response.ok) {
         throw new Error('Search failed');
       }

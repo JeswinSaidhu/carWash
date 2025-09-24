@@ -61,8 +61,8 @@ const AddBookingForm = ({ onClose, onBookingAdded, bookingToEdit }) => {
       const submitData = { ...formData, bookingDate: formattedDate };
 
       const url = bookingToEdit
-        ? `http://localhost:${import.meta.env.VITE_PORT}/api/bookings/${bookingToEdit._id}`
-        : `http://localhost:${import.meta.env.VITE_PORT}/api/bookings`;
+        ? `${import.meta.env.FETCH_API}/api/bookings/${bookingToEdit._id}`
+        : `${import.meta.env.FETCH_API}/api/bookings`;
 
       const method = bookingToEdit ? 'PUT' : 'POST';
 

@@ -14,7 +14,7 @@ const Hero = () => {
 
   const fetchPendingBookings = async () => {
     try {
-      const response = await fetch(`http://localhost:${import.meta.env.VITE_PORT}/api/bookings/pending`);
+      const response = await fetch(`${import.meta.env.FETCH_API}/api/bookings/pending`);
       if (!response.ok) {
         throw new Error('Failed to fetch pending bookings');
       }
