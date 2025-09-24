@@ -36,3 +36,7 @@ mongoose.connect(process.env.MONGO_URI)
     console.error('Error connecting to MongoDB:', err);
     process.exit(1);
   });
+
+app.use("/", (req, res) => {
+  res.status(200).send({ message: "Hello" });
+});
