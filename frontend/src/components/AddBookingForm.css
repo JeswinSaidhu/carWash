@@ -1,0 +1,388 @@
+/* Form Overlay */
+.form-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+/* Form Container */
+.form-container {
+  background: #ffffff;
+  border-radius: 0.75rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  max-width: 600px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  border: 1px solid #e5e7eb;
+}
+
+/* Form Header */
+.form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.form-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #015055;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #6b7280;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  transition: all 0.2s ease;
+}
+
+.close-button:hover {
+  background-color: #f3f4f6;
+  color: #374151;
+}
+
+/* Success Message */
+.success-message {
+  margin: 1rem 1.5rem;
+  padding: 1rem;
+  background-color: #d1fae5;
+  color: #065f46;
+  border-radius: 0.5rem;
+  border: 1px solid #a7f3d0;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* Form */
+.booking-form {
+  padding: 1.5rem;
+}
+
+/* Form Sections */
+.form-section {
+  margin-bottom: 2rem;
+}
+
+.form-section:last-child {
+  margin-bottom: 0;
+}
+
+.section-icon {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.form-section h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #015055;
+  margin: 0 0 1rem 0;
+}
+
+/* Form Grid */
+.form-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 480px) {
+  .form-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Form Groups */
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group input,
+.form-group select {
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+  background-color: #ffffff;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #ecf200;
+  box-shadow: 0 0 0 3px rgba(236, 242, 0, 0.1);
+}
+
+.form-group input::placeholder {
+  color: #9ca3af;
+}
+
+/* Error Message */
+.error-message {
+  margin: 1rem 0;
+  padding: 0.75rem;
+  background-color: #fee2e2;
+  color: #dc2626;
+  border-radius: 0.375rem;
+  border: 1px solid #fecaca;
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+/* Form Actions */
+.form-actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 2rem;
+  flex-direction: column;
+}
+
+@media (min-width: 480px) {
+  .form-actions {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+}
+
+.cancel-button {
+  padding: 0.75rem 1.5rem;
+  border: 1px solid #d1d5db;
+  background-color: #ffffff;
+  color: #374151;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.cancel-button:hover {
+  background-color: #f9fafb;
+  border-color: #9ca3af;
+}
+
+.submit-button {
+  padding: 0.75rem 1.5rem;
+  border: 1px solid #ecf200;
+  background-color: #ecf200;
+  color: #015055;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.submit-button:hover:not(:disabled) {
+  background-color: #d4c000;
+  border-color: #d4c000;
+}
+
+.submit-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Tablet Styles */
+@media (max-width: 1024px) {
+  .form-container {
+    max-width: 550px;
+  }
+
+  .form-header h2 {
+    font-size: 1.375rem;
+  }
+
+  .booking-form {
+    padding: 1.375rem;
+  }
+
+  .form-section h3 {
+    font-size: 1rem;
+  }
+
+  .form-group input,
+  .form-group select {
+    font-size: 0.85rem;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .form-overlay {
+    padding: 0.5rem;
+  }
+
+  .form-container {
+    margin: 0.5rem;
+    max-width: none;
+    width: calc(100vw - 1rem);
+    max-height: calc(100vh - 1rem);
+    border-radius: 0.5rem;
+  }
+
+  .form-header {
+    padding: 1rem 1.25rem;
+  }
+
+  .form-header h2 {
+    font-size: 1.25rem;
+  }
+
+  .close-button {
+    font-size: 1.25rem;
+    padding: 0.375rem;
+  }
+
+  .success-message {
+    margin: 0.75rem 1.25rem;
+    padding: 0.875rem;
+    font-size: 0.85rem;
+  }
+
+  .booking-form {
+    padding: 1rem 1.25rem;
+  }
+
+  .form-section {
+    margin-bottom: 1.75rem;
+  }
+
+  .form-section h3 {
+    font-size: 1rem;
+    margin-bottom: 0.875rem;
+  }
+
+  .section-icon {
+    font-size: 1.125rem;
+  }
+
+  .form-grid {
+    gap: 0.875rem;
+  }
+
+  .form-group input,
+  .form-group select {
+    padding: 0.625rem;
+    font-size: 0.85rem;
+  }
+
+  .form-group input::placeholder {
+    font-size: 0.8rem;
+  }
+
+  .error-message {
+    margin: 0.875rem 0;
+    padding: 0.625rem;
+    font-size: 0.8rem;
+  }
+
+  .form-actions {
+    margin-top: 1.75rem;
+    gap: 0.625rem;
+  }
+
+  .cancel-button,
+  .submit-button {
+    padding: 0.625rem 1.125rem;
+    font-size: 0.85rem;
+  }
+}
+
+/* Small Mobile Styles */
+@media (max-width: 480px) {
+  .form-overlay {
+    padding: 0.25rem;
+  }
+
+  .form-container {
+    margin: 0.25rem;
+    width: calc(100vw - 0.5rem);
+    max-height: calc(100vh - 0.5rem);
+    border-radius: 0.375rem;
+  }
+
+  .form-header {
+    padding: 0.875rem 1rem;
+  }
+
+  .form-header h2 {
+    font-size: 1.125rem;
+  }
+
+  .close-button {
+    font-size: 1.125rem;
+    padding: 0.25rem;
+  }
+
+  .success-message {
+    margin: 0.625rem 1rem;
+    padding: 0.75rem;
+    font-size: 0.8rem;
+  }
+
+  .booking-form {
+    padding: 0.875rem 1rem;
+  }
+
+  .form-section {
+    margin-bottom: 1.5rem;
+  }
+
+  .form-section h3 {
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .section-icon {
+    font-size: 1rem;
+  }
+
+  .form-grid {
+    gap: 0.75rem;
+  }
+
+  .form-group input,
+  .form-group select {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  .form-group input::placeholder {
+    font-size: 0.75rem;
+  }
+
+  .error-message {
+    margin: 0.75rem 0;
+    padding: 0.5rem;
+    font-size: 0.75rem;
+  }
+
+  .form-actions {
+    margin-top: 1.5rem;
+    gap: 0.5rem;
+  }
+
+  .cancel-button,
+  .submit-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+  }
+}
