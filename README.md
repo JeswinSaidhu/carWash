@@ -1,30 +1,38 @@
 # Car Wash Booking System
 
-## Overview
+## Description
 
-This is a full-stack car wash booking management system built with React (Vite) frontend and Node.js/Express backend with MongoDB database. The application allows users to create, view, edit, and delete car wash bookings with a modern, responsive interface.
+This is a comprehensive full-stack car wash booking management system designed to streamline the booking process for car wash services. Built with modern web technologies, it provides an intuitive interface for managing customer bookings, tracking service status, and maintaining detailed records of all transactions.
+
+The application features a responsive React frontend powered by Vite for fast development, paired with a robust Node.js/Express backend and MongoDB database for reliable data management. It supports complete booking lifecycle management from creation to completion, with advanced filtering, searching, and real-time updates.
 
 ## Features
 
-- **Booking Management**: Create, read, update, and delete car wash bookings
-- **Status Tracking**: Track booking status (Pending, Confirmed, Completed, Cancelled)
-- **Filtering & Sorting**: Filter by car type and wash type, sort by date or price
-- **Responsive Design**: Mobile-friendly interface with modern UI
-- **Real-time Updates**: Live status updates and booking modifications
+- **Complete Booking Management**: Full CRUD operations for car wash bookings
+- **Advanced Status Tracking**: Monitor booking lifecycle (Pending, Confirmed, Completed, Cancelled)
+- **Smart Search & Filtering**: Search by customer or car name, filter by car type and wash type
+- **Flexible Sorting**: Sort bookings by date, price, or other criteria
+- **Responsive Design**: Fully responsive interface optimized for desktop, tablet, and mobile devices
+- **Modern UI/UX**: Clean, intuitive interface with smooth animations and transitions
+- **Real-time Updates**: Instant updates for booking modifications and status changes
+- **Data Validation**: Comprehensive form validation for data integrity
+- **Error Handling**: Robust error handling with user-friendly messages
 
 ## Tech Stack
 
 ### Frontend
 
-- **React** with Vite
-- **CSS** for styling
-- **React Router** for navigation
+- **React 18** with Vite for fast development and building
+- **Tailwind CSS** for utility-first styling
+- **React Router DOM** for client-side routing
+- **Axios** for HTTP requests (if applicable)
 
 ### Backend
 
-- **Node.js** with Express
-- **MongoDB** with Mongoose
-- **CORS** for cross-origin requests
+- **Node.js** with Express.js framework
+- **MongoDB** with Mongoose ODM
+- **CORS** for handling cross-origin requests
+- **Dotenv** for environment variable management
 
 ## Folder Structure
 
@@ -149,16 +157,28 @@ npm run dev
 
 ### Home Page
 
-![Home Page](./screenshots/home-page.png)
+![Home Page 1](./screenshots/homePage1.png)
+![Home Page 2](./screenshots/homePage2.png)
 
 ### All Bookings
 
-![All Bookings](./screenshots/all-bookings.png)
+![All Bookings](./screenshots/allBookingsWithFilters.png)
 
 ### Booking Details
 
-![Booking Details](./screenshots/booking-details.png)
+![Booking Details](./screenshots/bookingDetails.png)
 
-### Add/Edit Booking
+### Form Booking
 
-![Add Booking](./screenshots/add-booking.png)
+![Add Booking](./screenshots/bookingForm.png)
+
+## Mobile Screenshots
+
+![Home Page 1](./screenshots/mHome.png)
+![Booking Details](./screenshots/mDetails.png)
+![Booking Form](./screenshots/mBooking.png)
+![All Booking Details](./screenshots/mAllBookings.png)
+
+## Live Link
+
+[Car Wash Booking System](https://car-wash-eight.vercel.app/)

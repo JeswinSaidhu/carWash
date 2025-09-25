@@ -182,7 +182,7 @@ const Hero = () => {
                             </div>
                             <div className="price-info">
                               <span className="price-label">Price:</span>
-                              <span className="price-value">${booking.carWashPrice}</span>
+                              <span className="price-value">₹{booking.carWashPrice}</span>
                             </div>
                           </div>
                         </div>

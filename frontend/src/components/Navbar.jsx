@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './Navbar.css';
+import searchIcon from '../assets/search.png';
+import appointmentIcon from '../assets/appointment.png';
 
 const Navbar = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -64,7 +66,7 @@ const Navbar = () => {
           <div className="search-container">
             {isMobile && (
               <div className="search-icon" title="Click to search">
-                <img src="/src/assets/search.png" alt="Search" className="icon-img" />
+                <img src={searchIcon} alt="Search" className="icon-img" />
               </div>
             )}
             <form onSubmit={handleSearch} className="search-form">
@@ -76,7 +78,7 @@ const Navbar = () => {
                 className="search-input"
               />
               <button type="submit" className={`search-button ${isMobile ? 'icon-link' : ''}`} disabled={isSearching} title="Search">
-                {isSearching ? '...' : (isMobile ? <img src="/src/assets/search.png" alt="Search" className="icon-img" /> : 'Search')}
+                {isSearching ? '...' : (isMobile ? <img src={searchIcon} alt="Search" className="icon-img" /> : 'Search')}
               </button>
             </form>
           </div>
@@ -91,7 +93,7 @@ const Navbar = () => {
             )}
             <li>
               <Link to="/all-bookings" className={`navbar-link ${isMobile ? 'icon-link' : ''}`} onClick={clearSearch} title="All Bookings">
-                {isMobile ? <img src="/src/assets/appointment.png" alt="All Bookings" className="icon-img" /> : 'All Bookings'}
+                {isMobile ? <img src={appointmentIcon} alt="All Bookings" className="icon-img" /> : 'All Bookings'}
               </Link>
             </li>
           </ul>
