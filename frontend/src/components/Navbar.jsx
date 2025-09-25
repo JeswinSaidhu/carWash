@@ -13,7 +13,7 @@ const Navbar = () => {
   useEffect(() => {
     const checkScreenSize = () => {
       setIsMobile(window.innerWidth <= 769);
-      setIsVerySmall(window.innerWidth <= 760);
+      setIsVerySmall(window.innerWidth < 500);
     };
 
     checkScreenSize();
@@ -28,7 +28,7 @@ const Navbar = () => {
 
     setIsSearching(true);
     try {
-      const response = await fetch(`${import.meta.env.FETCH_API}/api/bookings/search?q=${encodeURIComponent(searchQuery)}`);
+      const response = await fetch(`${import.meta.env.VITE_FETCH_API}/api/bookings/search?q=${encodeURIComponent(searchQuery)}`);
       if (!response.ok) {
         throw new Error('Search failed');
       }

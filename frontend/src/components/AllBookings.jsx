@@ -68,7 +68,7 @@ const AllBookings = () => {
   const fetchAllBookings = async () => {
     try {
       setLoading(true);
-      const response = await fetch(`${import.meta.env.FETCH_API}/api/bookings`);
+      const response = await fetch(`${import.meta.env.VITE_FETCH_API}/api/bookings`);
       if (!response.ok) {
         throw new Error('Failed to fetch bookings');
       }

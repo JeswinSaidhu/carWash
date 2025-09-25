@@ -25,7 +25,7 @@ const BookingDetails = () => {
   const fetchBookingDetails = async () => {
     try {
       setLoading(true);
-      const response = await fetch(`${import.meta.env.FETCH_API}/api/bookings/${id}`);
+      const response = await fetch(`${import.meta.env.VITE_FETCH_API}/api/bookings/${id}`);
       if (!response.ok) {
         throw new Error('Failed to fetch booking details');
       }
@@ -82,7 +82,7 @@ const BookingDetails = () => {
   const handleDelete = async () => {
     if (window.confirm('Are you sure you want to delete this booking?')) {
       try {
-        const response = await fetch(`${import.meta.env.FETCH_API}/api/bookings/${id}`, {
+        const response = await fetch(`${import.meta.env.VITE_FETCH_API}/api/bookings/${id}`, {
           method: 'DELETE',
         });
         if (!response.ok) {
@@ -101,7 +101,7 @@ const BookingDetails = () => {
 
   const handleStatusUpdate = async () => {
     try {
-      const response = await fetch(`${import.meta.env.FETCH_API}/api/bookings/${id}`, {
+      const response = await fetch(`${import.meta.env.VITE_FETCH_API}/api/bookings/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
