@@ -177,7 +177,8 @@ npm run dev
 ![Home Page 1](./screenshots/mHome.png)
 ![Booking Details](./screenshots/mDetails.png)
 ![Booking Form](./screenshots/mBooking.png)
-![All Booking Details](./screenshots/mAllBookings.png)
+![All Booking Details](https://github.com/user-attachments/assets/2769c65b-26b7-49d6-9c9d-f02da7da5bc7)
+)
 
 ## Live Link
 
